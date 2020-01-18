@@ -1,0 +1,27 @@
+{
+  "customer": {
+    "id": "872738729",
+    "firstName": "Onur",
+    "lastName": "Baskirt",
+    "email": "onur.baskirt@swtestacademy.com"
+  },
+  "products": [
+    {
+      "description": "Rest Api Testing with Rest Assured and Spring.",
+      "type": "Course",
+      "productAttributes": [
+        {
+          "courseLength": "5 hours",
+          "courseCreationDate": "2021-01-14",
+          "courseLevel": "Advanced"
+        }
+      ],
+      "price": {
+        "amount": 80,
+        "discount": 30,
+        "paymentType": "CREDIT CARD",
+        "currency": "USD"
+      }
+    }
+  ]
+}

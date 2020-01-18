@@ -1,0 +1,17 @@
+{
+  "description": "Rest Api Testing with Rest Assured and Spring.",
+  "type": "Course",
+  "productAttributes": [
+    {
+      "courseLenght": "5 hours",
+      "courseCreationDate": "2021-01-14",
+      "courseLevel": "advanced"
+    }
+  ],
+  "price": {
+    "amount": 91.42,
+    "discount": 20,
+    "paymetType": "CREDIT CARD",
+    "currency": "USD"
+  }
+}

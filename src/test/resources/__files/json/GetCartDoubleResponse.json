@@ -1,0 +1,47 @@
+{
+  "id": "klms2f4c-8129-4a4b-b32d-550b7fc3cfb2",
+  "customer": {
+    "id": "872738729",
+    "firstName": "Onur",
+    "lastName": "Baskirt",
+    "email": "onur.baskirt@swtestacademy.com"
+  },
+  "products": [
+    {
+      "id": "93b55282-334c-48b0-a8f7-a9d5eef9c4b9",
+      "description": "Rest Api Testing with Rest Assured and Spring.",
+      "type": "Course",
+      "productAttributes": [
+        {
+          "courseLength": "5 hours",
+          "courseCreationDate": "2021-01-14",
+          "courseLevel": "advanced"
+        }
+      ],
+      "price": {
+        "amount": 80,
+        "discount": 30,
+        "paymentType": "CREDIT CARD",
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "94b55282-334c-48b0-a8f7-a9d5eef9c4c9",
+      "description": "Selenium Webdriver Tutorial.",
+      "type": "Course",
+      "productAttributes": [
+        {
+          "courseLenght": "4 hours",
+          "courseCreationDate": "2020-08-15",
+          "courseLevel": "intermediate"
+        }
+      ],
+      "price": {
+        "amount": 60,
+        "discount": 20,
+        "paymetType": "CREDIT CARD",
+        "currency": "USD"
+      }
+    }
+  ]
+}

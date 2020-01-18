@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": "94b55282-334c-48b0-a8f7-a9d5eef9c4c9",
+      "description": "Selenium Webdriver Tutorial.",
+      "type": "Course",
+      "productAttributes": [
+        {
+          "courseLenght": "4 hours",
+          "courseCreationDate": "2020-08-15",
+          "courseLevel": "intermediate"
+        }
+      ],
+      "price": {
+        "amount": 60,
+        "discount": 20,
+        "paymetType": "CREDIT CARD",
+        "currency": "USD"
+      }
+    }
+  ]
+}
