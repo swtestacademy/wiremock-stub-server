@@ -13,6 +13,9 @@ public class StubServerMain {
             .stubForPutProduct("PutProductRequest.json","PutProductResponse.json")
             .stubForDeleteProduct()
             .stubForDeleteCart()
+                .stubFor503ServiceUnavailable()
+                .stubFor500InternalServerError()
+                .stubForFaultError()
             .status();
     }
 }

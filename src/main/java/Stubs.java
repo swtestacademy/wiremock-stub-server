@@ -1,4 +1,5 @@
 import com.github.tomakehurst.wiremock.WireMockServer;
+import com.github.tomakehurst.wiremock.http.Fault;
 import utils.JsonUtil;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
@@ -96,6 +97,28 @@ public class Stubs {
         wireMockServer.stubFor(delete("/carts/klms2f4c-8129-4a4b-b32d-550b7fc3cfb2")
             .willReturn(aResponse()
                 .withStatus(204)));
+        return this;
+    }
+    public Stubs stubFor503ServiceUnavailable() {
+        wireMockServer.stubFor(get("/carts/klms2f4c-8129-4a4b-b32d-550b7fc3cfb2?productCount=3")
+                .willReturn(aResponse().
+                        withStatus(503).
+                        withBody("Service Unavailable")));
+        return this;
+    }
+
+    public Stubs stubFor500InternalServerError() {
+        wireMockServer.stubFor(get(urlEqualTo("/carts/klms2f4c-8129-4a4b-b32d-550b7fc3cab9?productCount=4"))
+                .willReturn(aResponse().
+                        withStatus(500).
+                        withBody("Internal Server Error")));
+        return this;
+    }
+    public Stubs stubForFaultError() {
+        wireMockServer.stubFor(get(urlEqualTo("/carts/klms2f4c-8129-4a4b-b32d-550b7fc3xy10?productCount=5"))
+                .willReturn(aResponse()
+                        .withFault(Fault.CONNECTION_RESET_BY_PEER)
+                        .withBody("Connection Reset")));
         return this;
     }
 
