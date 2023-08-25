@@ -1,0 +1,337 @@
+{
+	"info": {
+		"_postman_id": "d5a94a6b-f18d-45ef-8016-a129d1b5a1c3",
+		"name": "Sample API for Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6764683"
+	},
+	"item": [
+		{
+			"name": "Create A Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Version",
+						"value": "v1",
+						"type": "text"
+					},
+					{
+						"key": "Client",
+						"value": "Android",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer SWTestAcademyShopSecretToken",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"customer\": {\n    \"id\": \"872738729\",\n    \"firstName\": \"Onur\",\n    \"lastName\": \"Baskirt\",\n    \"email\": \"onur.baskirt@swtestacademy.com\"\n  },\n  \"products\": [\n    {\n      \"description\": \"Rest Api Testing with Rest Assured and Spring.\",\n      \"type\": \"Course\",\n      \"productAttributes\": [\n        {\n          \"courseLength\": \"5 hours\",\n          \"courseCreationDate\": \"2021-01-14\",\n          \"courseLevel\": \"Advanced\"\n        }\n      ],\n      \"price\": {\n        \"amount\": 80.0,\n        \"discount\": 30.0,\n        \"paymentType\": \"CREDIT CARD\",\n        \"currency\": \"USD\"\n      }\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:7040/carts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7040",
+					"path": [
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cart Single",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3467/carts/klms2f4c-8129-4a4b-b32d-550b7fc3cfb2?productCount=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3467",
+					"path": [
+						"carts",
+						"klms2f4c-8129-4a4b-b32d-550b7fc3cfb2"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "productCount",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cart Double_ServiceUnavailable",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3467/carts/klms2f4c-8129-4a4b-b32d-550b7fc3cfb2?productCount=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3467",
+					"path": [
+						"carts",
+						"klms2f4c-8129-4a4b-b32d-550b7fc3cfb2"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "productCount",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cart Double_Internal_Server_Error",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3467/carts/klms2f4c-8129-4a4b-b32d-550b7fc3cab9?productCount=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3467",
+					"path": [
+						"carts",
+						"klms2f4c-8129-4a4b-b32d-550b7fc3cab9"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "productCount",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cart Double",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3467/carts/klms2f4c-8129-4a4b-b32d-550b7fc3cfb2?productCount=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3467",
+					"path": [
+						"carts",
+						"klms2f4c-8129-4a4b-b32d-550b7fc3cfb2"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "productCount",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Version",
+						"value": "v1",
+						"type": "text"
+					},
+					{
+						"key": "Client",
+						"value": "Android",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer SWTestAcademyShopSecretToken",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"products\": [\n    {\n      \"description\": \"Selenium Webdriver Tutorial.\",\n      \"type\": \"Course\",\n      \"productAttributes\": [\n        {\n          \"courseLenght\": \"4 hours\",\n          \"courseCreationDate\": \"2020-08-15\",\n          \"courseLevel\": \"intermediate\"\n        }\n      ],\n      \"price\": {\n        \"amount\": 60.0,\n        \"discount\": 20.0,\n        \"paymetType\": \"CREDIT CARD\",\n        \"currency\": \"USD\"\n      }\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3467/carts/klms2f4c-8129-4a4b-b32d-550b7fc3cfb2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3467",
+					"path": [
+						"carts",
+						"klms2f4c-8129-4a4b-b32d-550b7fc3cfb2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Version",
+						"type": "text",
+						"value": "v1"
+					},
+					{
+						"key": "Client",
+						"type": "text",
+						"value": "Android"
+					},
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "Bearer SWTestAcademyShopSecretToken"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"description\": \"Rest Api Testing with Rest Assured and Spring.\",\n  \"type\": \"Course\",\n  \"productAttributes\": [\n    {\n      \"courseLenght\": \"5 hours\",\n      \"courseCreationDate\": \"2021-01-14\",\n      \"courseLevel\": \"advanced\"\n    }\n  ],\n  \"price\": {\n    \"amount\": 91.42,\n    \"discount\": 20.0,\n    \"paymetType\": \"CREDIT CARD\",\n    \"currency\": \"USD\"\n  }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3467/carts/klms2f4c-8129-4a4b-b32d-550b7fc3cfb2/products/93b55282-334c-48b0-a8f7-a9d5eef9c4b9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3467",
+					"path": [
+						"carts",
+						"klms2f4c-8129-4a4b-b32d-550b7fc3cfb2",
+						"products",
+						"93b55282-334c-48b0-a8f7-a9d5eef9c4b9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": ""
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Version",
+						"value": "v1",
+						"type": "text"
+					},
+					{
+						"key": "Client",
+						"value": "Android",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer SWTestAcademyShopSecretToken",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3467/carts/klms2f4c-8129-4a4b-b32d-550b7fc3cfb2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3467",
+					"path": [
+						"carts",
+						"klms2f4c-8129-4a4b-b32d-550b7fc3cfb2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
